@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Benz Grotesk";
+  background: #333;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#artiste {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#bouton-recherche {
+  font-family: "chillax";
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #6827ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+#bouton-recherche:hover {
+  transform: translateY(-2px);
+}
+
+#bouton-recherche:active {
+  transform: translateY(0);
+}
+
+.bouton-vider {
+  padding: 10px 20px;
+  font-size: 14px;
+  background: #707070;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bouton-vider:hover {
+  background: #c0392b;
+}
+
+#resultats {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* 250px minimum par card */
+  gap: 20px; /* espace entre les cards */
+  margin-top: 20px;
+}
+
+#resultats button,
+#resultats h2 {
+  display: block;
+  width: 100%; /* prennent toute la largeur de la cellule grid */
+  box-sizing: border-box;
+}
+
+#resultats button {
+  background: #777777;
+  color: white;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#resultats h2 {
+  background: #6827ff;
+  color: white;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.artiste {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  text-align: center;
+}
+
+.artiste:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.artiste h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artiste img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.no-results {
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  #resultats {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.track {
+  background: #393695;
+}
+
+.album img {
+  border-radius: 10px;
+}
+
+.albums-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  gap: 20px;
+}
+
+.album h4 {
+  color: white;
+}

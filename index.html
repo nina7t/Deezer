@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Recherche d'artistes Deezer</h1>
+            <p>Découvrez vos artistes préférés</p>
+        </header>
+
+        <div class="search-box">
+            <div class="search-container">
+                <input type="text" id="artiste" placeholder="Entrez le nom d'un artiste..." onkeypress="if(event.key === 'Enter') rechercheArtiste()">
+                <button id="bouton-recherche">Rechercher</button>
+            </div>
+            <button class="bouton-vider" onclick="viderResultats()">Vider les résultats</button>
+        </div>
+
+        <div id="resultats"></div>
+
+        <!-- Lecteur audio -->
+        <audio id="audio-player" controls style="width: 100%; margin-top: 20px; display: none;"></audio>
+    </div>
+    <script src="deezer.js"></script>
+</body>
+</html>
